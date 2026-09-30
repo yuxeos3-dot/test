@@ -1,0 +1,4 @@
+Sitemap: https://hltt2.com/sitemap.xml
+
+User-agent: *
+Allow: /
