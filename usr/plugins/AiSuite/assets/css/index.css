@@ -1,0 +1,3216 @@
+html body:has(.login_dialog) {
+    background-color: transparent;
+}
+
+.sp_breadcrumb_nav {
+    font-size: 0.75rem;
+    color: #bcbcbc;
+}
+
+/* ye 导航菜单 start */
+#ai-navigation-container .avatar_btn_user {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+}
+
+#ai-navigation-container .user_target {
+    position: relative;
+    overflow: hidden;
+}
+
+#ai-navigation-container .avatar_notice_dot {
+    position: absolute;
+    top: 0.2rem;
+    right: 0.3rem;
+    width: 0.375rem;
+    height: 0.375rem;
+    border-radius: 50%;
+    background-color: #ff3b30;
+    border: 0.09375rem solid #fff;
+    box-sizing: border-box;
+    z-index: 2;
+    pointer-events: none;
+    transform: translate(35%, -35%);
+}
+
+@media (min-width: 768px) {
+    #ai-navigation-container .avatar_notice_dot {
+        width: 0.625rem;
+        height: 0.625rem;
+        border-width: 0.125rem;
+        transform: translate(40%, -40%);
+    }
+}
+
+.user_menu {
+    position: absolute;
+    right: 0px;
+    width: 12.5rem;
+    border: 0.8rem solid #191919;
+    background: #131313;
+    border-radius: 0.5rem;
+    display: none;
+    z-index: 1000;
+}
+
+.user_menu.is-open {
+    display: block;
+}
+
+.user_menu a {
+    display: block;
+    padding-block: 0.8rem;
+    color: inherit;
+    text-decoration: none;
+    font-size: 0.9375rem;
+}
+
+.user_menu a:hover {
+    background: #191919;
+}
+
+.user_menu .userinfo {
+    padding-block: 0.8rem;
+}
+
+.user_menu .username {
+    color: #1abc9d;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.user_menu .userid {
+    color: #fff;
+    opacity: 0.5;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.user_menu .logout_btn {
+    color: #ff2b5c;
+    text-align: center;
+    font-size: 0.9375rem;
+    padding-block: 0.6rem;
+}
+
+/* ye 导航菜单 end */
+
+/* ye 登陆/注册 start */
+.parsley-errors-list {
+    margin: 0.375rem 0 0;
+    list-style: none;
+    font-size: 1.125rem;
+    color: #ef4444;
+    display: none;
+}
+
+.parsley-errors-list.filled {
+    display: block;
+}
+
+.login_dialog {
+    /* display: none; */
+    position: fixed;
+    inset: 0;
+    z-index: 900;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.login_dialog img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.login_modal {
+    width: 35vw;
+    min-width: 420px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+}
+
+.login_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 1.875rem;
+    background-color: #222;
+    border-radius: 0.375rem;
+}
+
+.login_dialog .logo {
+    width: 11rem;
+}
+
+.login_dialog .slogan {
+    font-size: 1.625rem;
+    font-weight: 600;
+    margin-top: 0.625rem;
+    margin-bottom: 1.25rem;
+}
+
+.login_form_item {
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.login_form_item>input {
+    width: 100%;
+    outline: none;
+    border: solid 1px #979797;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 1.125rem;
+    color: #bcbcbc;
+    background-color: transparent;
+}
+
+.login_dialog .btn_group {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 1.25rem;
+    color: #fff;
+    font-weight: 600;
+}
+
+.login_dialog .btn_group .btn {
+    flex: 1;
+    background-color: #1abc9d;
+    cursor: pointer;
+    text-align: center;
+    line-height: 3rem;
+    border-radius: 0.5rem;
+    font-size: 1.125rem;
+}
+
+.login_dialog .login_close_btn {
+    margin: auto;
+    width: 2.625rem;
+    height: 2.625rem;
+    cursor: pointer;
+    margin-top: 1.875rem;
+}
+
+.login_tips {
+    align-self: self-start;
+    margin-top: 2.5rem;
+    color: #c0bfbf;
+}
+
+.login_tips .login_tips_title {
+    font-size: 1.125rem;
+    margin-bottom: 0.3125rem;
+}
+
+.login_tips .login_tips_list {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+/* ye 登陆/注册 end */
+
+/* 充值中心 start */
+.recharge_center {
+    margin: 1.875rem 0;
+}
+
+.recharge_panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #383737;
+    border-radius: 0.375rem;
+    padding: 1.5rem 1.875rem;
+}
+
+.recharge_panel_title {
+    margin-bottom: 0.3125rem;
+    color: #bcbcbc;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.recharge_panel_balance {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.recharge_panel_balance .coin {
+    width: 1.625rem;
+    height: 1.625rem;
+}
+
+.recharge_record_btn {
+    font-size: 1rem;
+    /* 0923 需求迭代-页面 UI优化 */
+    color: #FF4886;
+    border: solid 1px;
+    border-radius: 999px;
+    padding: 0.9375rem 1.875rem;
+}
+
+.recharge_amounts {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.recharge_amount_item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.625rem;
+    align-items: center;
+    background-color: #383737;
+    border-radius: 0.375rem;
+    padding-bottom: 0.625rem;
+    cursor: pointer;
+}
+
+.amount_item_label {
+    align-self: start;
+    font-size: 0.75rem;
+    font-weight: 500;
+    /* 0923 需求迭代-页面 UI优化 */
+    color: #fff;
+    padding: 0.1875rem 0.5rem;
+    /* 0923 需求迭代-页面 UI优化 */
+    background-color: #FF4886;
+    border-radius: 0.375rem 0 0.8rem 0;
+}
+
+.amount_item_label_no {
+    height: 1.2375rem;
+}
+
+.recharge_amount_item .amount {
+    font-size: 1.125rem;
+}
+
+.recharge_amount_item .price {
+    /* 0923 需求迭代-页面 UI优化 */
+    color: #FF4886;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.recharge_origin_price {
+    color: #888888;
+    font-size: 0.75rem;
+    /* margin-top: -0.5rem; */
+    text-decoration: line-through;
+}
+
+.payment_methods {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.payment_methods_items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0.625rem;
+    height: 3.75rem;
+    cursor: pointer;
+    background-color: #383737;
+    border-radius: 0.375rem;
+}
+
+.payment_methods_items>.item_icon {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.payment_methods_items>.item_label {
+    font-size: 0.875rem;
+    color: #bcbcbc;
+}
+
+.recharge_amount_item.is-active,
+.payment_methods_items.is-active {
+    /* 0923 需求迭代-页面 UI优化 */
+    outline: 1px solid #FF4886;
+    background-color: transparent;
+}
+
+.recharge_secondary_title {
+    font-size: 1.125rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.recharge_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 0923 需求迭代-页面 UI优化 */
+    background-color: #FF4886;
+    height: 3.125rem;
+    border-radius: 999px;
+    margin-block: 2.5rem;
+    cursor: pointer;
+    font-size: 0.875rem;
+    color: #fff;
+}
+
+.recharge_tips .recharge_tips_list {
+    display: flex;
+    flex-direction: column;
+    color: #bcbcbc;
+    font-size: 0.875rem;
+    line-height: 1.4;
+}
+
+.recharge_tips .recharge_tips_list .text-html {
+    white-space: pre-line;
+}
+
+/* 充值中心 end */
+
+/* 支付记录 start */
+.recharge_records_container {
+    margin: 1.875rem 0;
+}
+
+.recharge_records_nodata {
+    width: 100%;
+    padding: 8rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.recharge_records_nodata img {
+    width: 5rem;
+    height: 5rem;
+}
+
+.recharge_records_nodata>p {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #b8bcc6;
+}
+
+.recharge_records_item {
+    padding: 1.25rem 1.875rem;
+    background-color: #383737;
+    border-radius: 0.375rem;
+}
+
+.recharge_records_item+.recharge_records_item {
+    margin-top: 1.25rem;
+}
+
+.recharge_records_item_title {
+    display: flex;
+    align-items: center;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #444;
+    color: #bcbcbc;
+    font-size: 0.875rem;
+}
+
+.recharge_records_item_title>.copy {
+    width: 1rem;
+    height: 1rem;
+    margin-left: 0.625rem;
+    cursor: pointer;
+}
+
+.recharge_records_item_info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.recharge_records_item_status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.875rem;
+}
+
+/* //0-未支付2-支付中3-支付完成99-交易失败 */
+.recharge_records_item_status .item_status_0 {
+    color: #f00;
+}
+
+.recharge_records_item_status .item_status_2 {
+    color: #f79004;
+}
+
+.recharge_records_item_status .item_status_3 {
+    color: #1abc9d;
+}
+
+.recharge_records_item_status .item_status_99 {
+    color: #ff0000;
+}
+
+/* 支付记录 end */
+
+/* 我的AI start*/
+.mine-ai-container .ai-page-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.mine-ai-container .ai-tabs {
+    display: flex;
+    gap: 0.8rem;
+    border-bottom: 1px solid #444;
+}
+
+.mine-ai-container .ai-tabs>a {
+    color: #fff;
+}
+
+.mine-ai-container .ai-tabs .ai-tab {
+    height: 3rem;
+    line-height: 3rem;
+    padding: 0 0.6rem;
+    font-size: 1.1rem;
+}
+
+.mine-ai-container .ai-tabs .ai-tab.active {
+    /* 0923 需求迭代-页面 UI优化 */
+    color: #FF4886;
+    border-bottom: 2px solid #FF4886;
+}
+
+.mine-ai-container .ai-status-btn-group {
+    display: flex;
+    align-items: stretch;
+    height: 1.5rem;
+    width: fit-content;
+    border-radius: 0.2rem;
+    margin-top: 1.5rem;
+}
+
+.mine-ai-container .ai-status-btn-group>a {
+    color: #fff
+}
+
+.mine-ai-container .ai-status {
+    line-height: 2.4rem;
+    font-weight: 500;
+    padding: 0 0.8rem;
+    color: #bcbcbc;
+    font-size: 1rem;
+    border-radius: 1rem;
+}
+
+.mine-ai-container .ai-status.active {
+    background-color: #403e3e;
+    color: #fff
+}
+
+.mine-ai-container .ai-list-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.mine-ai-container .ai-list-wrap.novel-wrap .novel-card {
+    position: relative;
+    aspect-ratio: unset;
+    height: 13.6rem;
+}
+
+.mine-ai-container .ai-list-item {
+    margin-bottom: 2rem;
+    width: calc(33.33% - 1rem);
+}
+
+.mine-ai-container .ai-list-item-card {
+    position: relative;
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+}
+
+.mine-ai-container .ai-list-item-cover {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.mine-ai-container .ai-list-item-filter-mask {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+
+.mine-ai-container .ai-list-item-cover .ai-list-item-cover-process {
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.mine-ai-container .ai-list-item-cover img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.mine-ai-container .ai-list-item-cover img.zoom-img {
+    aspect-ratio: unset;
+}
+
+.mine-ai-container .ai-list-item-cover .ai-video-play-icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 3.5rem;
+    background-image: url('../../../../themes/Mirages/images/ai/video_play_icon.png');
+    background-size: cover;
+    aspect-ratio: 1;
+    z-index: 2;
+    cursor: pointer;
+}
+
+
+.mine-ai-container .ai-list-item-video-payer-btn {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 2.4rem;
+    height: 2.4rem;
+    background: rgba(0, 0, 0, .5);
+    border-radius: 1.2rem;
+}
+
+.mine-ai-container .ai-list-item-cover-save {
+    color: #fff;
+    width: 12.5rem;
+    height: 3rem;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    background: #1abc9d;
+    border-radius: 0.5rem;
+    text-align: center;
+    margin: 1rem auto 0 auto;
+    cursor: pointer;
+}
+
+.mine-ai-container .ai-list-item-date {
+    margin-top: 0.6rem;
+    text-align: center;
+    color: #bcbcbc;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.mine-ai-container .ai-list-item-error {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 0.6rem;
+    text-align: center;
+    color: #ff0000;
+}
+
+.mine-ai-container .display-none {
+    display: none;
+}
+
+.mine-ai-container .novel-card {
+    width: 100%;
+    aspect-ratio: 1;
+    background: #383737;
+}
+
+.mine-ai-container .ai-list-item-novel {
+    width: 100%;
+    height: 13rem;
+    box-sizing: border-box;
+    border-radius: 1rem;
+    padding: 0.8rem;
+    font-size: 1rem;
+    color: #bcbcbc;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 8;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+}
+
+.mine-ai-container .ai-novel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #444;
+}
+
+.mine-ai-container .is-pc {
+    display: block;
+}
+
+.mine-ai-container .is-mobile {
+    display: none;
+}
+
+.mine-ai-container .ai-novel-copy-btn {
+    width: 6rem;
+    height: 2.5rem;
+    text-align: center;
+    line-height: 2.5rem;
+    color: #1eb697;
+    font-size: 1rem;
+    border: 1px solid #1eb697;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.mine-ai-container .ai-novel-title {
+    font-size: 1.25rem;
+    color: #fff;
+    font-weight: 500;
+}
+
+.mine-ai-container .ai-novel-date {
+    font-size: 1rem;
+    color: #bcbcbc;
+    font-weight: 500;
+    margin-top: 1rem;
+}
+
+.mine-ai-container .ai-novel-content-text {
+    white-space: pre-wrap;
+    color: #bcbcbc;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 1rem;
+}
+
+.ai-list-no-data {
+    width: 100%;
+    padding: 8rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ai-list-no-data img {
+    width: 8.75rem;
+    height: 8.75rem;
+}
+
+.ai-list-no-data p {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #b8bcc6;
+}
+
+.user_profile_card>.ai-list-loading-container {
+    height: 100%;
+}
+
+.ai-list-loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 23.5rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.ai-list-loading-container>span {
+    margin-top: 1rem;
+}
+
+.ai-list-loading-container>img {
+    width: 5rem;
+}
+
+/* 我的AI end*/
+/* AI绘画 start*/
+.ai-draw-create-container .ai-create-options {
+    margin-top: 1.2rem;
+}
+
+.ai-draw-create-container .ai-create-property {
+    margin-top: 1.2rem;
+}
+
+.ai-draw-create-container .ai-create-property.hidden {
+    display: none;
+}
+
+.ai-draw-create-container .ai-create-property-label {
+    font-size: 0.8rem;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 0.325rem;
+}
+
+.ai-draw-create-container .ai-create-property-label.expert-mode {
+    margin-top: 1.2rem;
+}
+
+.ai-draw-create-container .ai-create-property-options {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.8rem
+}
+
+.ai-draw-create-container .ai-create-property[field-key="style"] .ai-create-property-options {
+    display: grid;
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+@media (max-width: 576px) {
+    .ai-draw-create-container .ai-create-property[field-key="style"] .ai-create-property-options {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .ai-list-loading-container {
+        height: 15rem;
+    }
+}
+
+@media(min-width: 577px) and (max-width: 768px) {
+    .ai-draw-create-container .ai-create-property[field-key="style"] .ai-create-property-options {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+}
+
+.ai-draw-create-container .ai-create-property-options-item {
+    min-width: 5rem;
+    height: 2rem;
+    text-align: center;
+    line-height: 2rem;
+    padding: 0 0.5rem;
+    border: solid 0.08rem #5e5c5c;
+    border-radius: 0.25rem;
+    font-size: 0.8rem;
+    color: #bcbcbc;
+    cursor: pointer;
+}
+
+.ai-draw-create-container .ai-create-property-options-item.active {
+    color: #1abc9d;
+    border-color: #1abc9d;
+}
+
+
+.ai-draw-create-container .ai-create-property-options-item.with_bg {
+    position: relative;
+    width: 5rem;
+    height: 5rem;
+    border: none;
+    border-radius: 0.5rem;
+}
+
+.ai-draw-create-container .ai-create-property-options-item.with_bg img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+}
+
+
+.ai-draw-create-container .ai-create-property-options-item.with_bg span {
+    position: absolute;
+    width: 100%;
+    bottom: 0.5rem;
+    left: 0;
+    color: #fff;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.ai-draw-create-container .ai-create-property-options-item.active.with_bg {
+    border: 1px solid #1abc9d;
+}
+
+.ai-draw-create-container .ai-create-property-options-item.active.with_bg:after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: -0.5rem;
+    top: -0.5rem;
+    width: 1rem;
+    height: 1rem;
+    background: url('../../../../themes/Mirages/images/checked-icon.png') no-repeat;
+    background-size: 100% 100%;
+    z-index: 999;
+}
+
+.ai-draw-create-container .ai-create-property-options-box {
+    width: 5rem;
+}
+
+.ai-draw-create-container .ai-create-property-options-outline {
+    width: 5rem;
+    height: 5rem;
+    background-color: rgba(26, 188, 157, 0.1);
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ai-draw-create-container .ai-create-property-options-box:first-child .ai-create-property-options-inner {
+    width: 30%;
+    height: 40%;
+    background: #1abc9d80 50%;
+}
+
+.ai-draw-create-container .ai-create-property-options-box:nth-child(2) .ai-create-property-options-inner {
+    width: 40%;
+    height: 40%;
+    background: #1abc9d80 50%;
+}
+
+.ai-draw-create-container .ai-create-property-options-box:last-child .ai-create-property-options-inner {
+    width: 40%;
+    height: 60%;
+    background: #1abc9d80 50%;
+}
+
+.ai-draw-create-container .ai-create-property-options-text-bottom {
+    text-align: center;
+    margin-top: 0.8rem;
+    font-size: 0.8rem;
+    color: #bcbcbc;
+}
+
+.ai-draw-create-container .ai-create-property-options-box.active .ai-create-property-options-outline {
+    border: 1px solid #1abc9d;
+}
+
+.ai-draw-create-container .ai-create-property-options-box.active .ai-create-property-options-text-bottom {
+    color: #1abc9d;
+    font-size: 0.8rem;
+}
+
+.ai-draw-create-container .ai-create-property-textarea {
+    width: 100%;
+    height: 8rem;
+    margin-top: 1rem;
+    padding: 1rem;
+    border: 1px solid #5e5c5c;
+    border-radius: 1rem;
+}
+
+.ai-draw-create-container .ai-create-property-textarea textarea {
+    background: transparent;
+    border: none;
+    height: 100%;
+    width: 100%;
+    color: #fff;
+}
+
+.ai-draw-create-container .ai-create-property-textarea textarea::placeholder {
+    color: #bcbcbc;
+    font-size: 0.8rem;
+}
+
+.ai-draw-create-container .ai-create-btn-submit {
+    width: 100%;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    text-align: center;
+    background: #1abc9d;
+    color: #ffffff;
+    transition: opacity 0.15s ease;
+    font-size: 0.9rem;
+    border-radius: 0.3rem;
+    margin: 1rem 0;
+    cursor: pointer;
+}
+
+.ai-draw-create-container .ai-create-btn-submit:hover {
+    opacity: 0.8;
+}
+
+/* AI绘画 end */
+/* AI小说 start*/
+#wst-novel-container {
+    padding: 1rem 0;
+}
+
+.wst-novel-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.875rem;
+}
+
+.wst-form-item {
+    margin-bottom: 0.935rem;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+}
+
+.wst-novel-form-label {
+    margin-bottom: 0.325rem;
+    color: #fff;
+    font-weight: 500;
+}
+
+.wst-novel-form-content .van-field {
+    padding: 0;
+    background: transparent;
+}
+
+.wst-novel-form-content .van-field input,
+.wst-novel-form-content textarea,
+.wst-novel-form-content input {
+    width: 100%;
+    background: transparent;
+    border-radius: 0.25rem;
+    color: #fff;
+    padding: 0.75rem 0.5rem;
+    border: solid 1px #5e5c5c;
+    text-align: left;
+}
+
+.wst-novel-form-content textarea {
+    resize: vertical;
+    overflow-y: auto;
+    height: 5rem;
+}
+
+.wst-novel-form-content .van-field input {
+    padding: 0.5rem;
+}
+
+.wst-novel-form-content .van-field input::placeholder {
+    color: #bcbcbc;
+}
+
+.wst-novel-btn {
+    width: 100%;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    text-align: center;
+    background: #1abc9d;
+    color: #ffffff;
+    transition: opacity 0.15s ease;
+    font-size: 0.9rem;
+    border-radius: 0.3rem;
+    margin: 1rem 0;
+    cursor: pointer;
+}
+
+/* AI小说 end*/
+/* hang AI入口列表 start */
+.ai-entry-list-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem 0.75rem;
+    padding-top: 1.5rem;
+}
+
+/* <!— 1203xf 回归测试 start --!> */
+.ai-entry-list-section .thumb {
+    background: transparent;
+    border-radius: 0.4rem;
+    place-items: center;
+    font-size: 0.9rem;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    transition: transform 0.15s ease;
+    cursor: pointer;
+    height: 15.625rem;
+}
+
+.ai-entry-list-section .thumb .img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.25rem;
+    display: block;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+@media (max-width:768px) {
+    .ai-entry-list-section .thumb {
+        height: 10.5rem;
+    }
+    .login_dialog .login_close_btn {
+        margin-top: 0.9375rem;
+        width: 2rem;
+        height: 2rem;
+    }
+}
+
+/* <!— 1203xf 回归测试 end --!> */
+.ai-entry-list-section .caption {
+    padding: 0.3rem 0;
+    font-size: 0.9rem;
+    bottom: 1rem;
+    color: #fff;
+    text-align: center;
+}
+
+.ai-entry-list-section .card:hover .thumb {
+    transform: translateY(-2px);
+}
+
+/* hang AI入口列表 end */
+
+/* AI图片换脸列表 start */
+.image-ai-change-section {
+    padding-top: 1rem;
+}
+
+.image-ai-change-section .card-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    overflow: hidden;
+    gap: 1rem;
+}
+
+.image-ai-change-section .card-list li {
+    list-style: none;
+    transition: transform 0.15s ease;
+    overflow: hidden;
+}
+
+.image-ai-change-section .card-list li:hover {
+    transform: translateY(-2px);
+}
+
+.image-ai-change-section .thumb {
+    position: relative;
+    cursor: pointer;
+    width: 10.8rem;
+    max-width: 100%;
+    height: 14.75rem;
+}
+
+.image-ai-change-section .img {
+    width: 10.8rem;
+    max-width: 100%;
+    height: 14.75rem;
+    border-radius: 0.2rem;
+    display: block;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+.image-ai-change-section .caption {
+    width: 10.8rem;
+    padding: 0.3rem 0;
+    font-size: 1rem;
+    text-align: center;
+    color: #ffffff;
+}
+
+/* AI图片换脸列表 end */
+
+/* AI图片换脸创建 start */
+.image-ai-create-layout {
+    padding: 1rem 0;
+    font-family: PingFangSC;
+}
+
+.image-ai-create-layout .is-pc {
+    display: none;
+}
+
+.image-ai-create-layout .title {
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.image-ai-create-layout .upload-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem 0;
+}
+
+.image-ai-create-layout .upload-container .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.image-ai-create-layout .upload-container article {
+    width: 12rem;
+    height: 12rem;
+}
+
+.image-ai-create-layout .upload-container .item .img {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 0.2rem;
+    display: block;
+    object-fit: cover;
+}
+
+.image-ai-create-layout .upload-container .item .img.zoom-img {
+    width: 60vw;
+    height: auto;
+}
+
+.image-ai-create-layout .upload-input-out {
+    width: 100%;
+    height: 15rem;
+    position: relative;
+    background: #383737;
+}
+
+.image-ai-create-layout .upload-input-out .upload-tips-div {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem 0;
+}
+
+.image-ai-create-layout .upload-input-out .upload-icon {
+    width: 3rem;
+    height: 3rem;
+}
+
+.image-ai-create-layout .upload-input-out .upload-tips {
+    font-size: 0.8rem;
+    color: #bcbcbc;
+}
+
+.image-ai-create-layout .upload-input-out input[type=file] {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.image-ai-create-layout .van-uploader .van-uploader__preview {
+    position: relative;
+    margin: 0;
+}
+
+.image-ai-create-layout .van-uploader,
+.image-ai-create-layout .van-uploader .van-uploader__wrapper,
+.image-ai-create-layout .van-uploader .van-uploader__preview,
+.image-ai-create-layout .van-uploader__input-wrapper,
+.image-ai-create-layout .van-uploader__preview-image {
+    width: 100%;
+    height: 100%;
+}
+
+.image-ai-create-layout .van-uploader__preview-image img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+.image-ai-create-layout .van-uploader__preview-delete--shadow {
+    width: 2rem;
+    height: 2rem;
+}
+
+.image-ai-create-layout .van-uploader__preview-delete-icon {
+    font-size: 2rem;
+}
+
+.image-ai-create-layout .van-uploader__preview-delete--shadow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 3;
+    width: 1rem;
+    height: 1rem;
+}
+
+.image-ai-create-layout .van-uploader__preview-delete-icon {
+    font-size: 1rem;
+}
+
+.image-ai-create-layout .notice-part {
+    font-size: 0.7rem;
+    padding: 1rem 0;
+    color: #bcbcbc;
+}
+
+.image-ai-create-layout .notices.is-pc {
+    display: none;
+}
+
+.image-ai-create-layout .notices {
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: #959595;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.image-ai-create-layout .notices.is-mobile {
+    display: flex;
+}
+
+.image-ai-create-layout .notice {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem 0;
+}
+
+.image-ai-create-layout .notice img {
+    width: 4rem;
+    height: 4rem;
+}
+
+.image-ai-create-layout .cost-btn {
+    width: 100%;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    text-align: center;
+    background: #1abc9d;
+    color: #ffffff;
+    transition: opacity 0.15s ease;
+    font-size: 0.9rem;
+    border-radius: 0.3rem;
+    margin: 1rem 0;
+    cursor: pointer;
+}
+
+.image-ai-create-layout .cost-btn:hover {
+    opacity: 0.8;
+}
+
+/* AI图片换脸创建 end */
+
+/* AI视频换脸列表 start */
+.video-ai-change-section {
+    padding-top: 1rem;
+}
+
+.video-ai-change-section .card-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    overflow: hidden;
+    gap: 1rem;
+}
+
+.video-ai-change-section .card-list li {
+    list-style: none;
+    transition: transform 0.15s ease;
+    overflow: hidden;
+}
+
+.video-ai-change-section .card-list li:hover {
+    transform: translateY(-2px);
+}
+
+.video-ai-change-section .thumb {
+    position: relative;
+    cursor: pointer;
+    width: 10.8rem;
+    max-width: 100%;
+    height: 14.75rem;
+}
+
+.video-ai-change-section .img {
+    width: 10.8rem;
+    max-width: 100%;
+    height: 14.75rem;
+    border-radius: 0.2rem;
+    display: block;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+.video-ai-change-section .caption {
+    padding: 0.3rem 0;
+    font-size: 1rem;
+    text-align: center;
+    color: #ffffff;
+    width: 10.8rem;
+    max-width: 100%;
+}
+
+.video-ai-change-section .modal-container-dplayer {
+    max-width: 100%;
+    width: 100%;
+    height: 70vh;
+}
+
+.video-ai-change-section .ai-video-play-icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 4.4rem;
+    background-image: url('../../../../themes/Mirages/images/ai/video_play_icon.png');
+    background-size: cover;
+    aspect-ratio: 1;
+    z-index: 2;
+    cursor: pointer;
+}
+
+/* AI视频换脸列表 end */
+
+/* AI视频换脸创建 start */
+.video-ai-create-layout {
+    padding: 1rem 0;
+    font-family: PingFangSC;
+}
+
+.video-ai-create-layout .is-pc {
+    display: none;
+}
+
+.video-ai-create-layout .title {
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.video-ai-create-layout .upload-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem 0;
+}
+
+.video-ai-create-layout .upload-container .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.video-ai-create-layout .upload-container .item .thumb {
+    position: relative;
+    width: 12rem;
+    height: 12rem;
+}
+
+.video-ai-create-layout .upload-container .item .img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.2rem;
+    display: block;
+    object-fit: cover;
+}
+
+.video-ai-create-layout .upload-input-out {
+    width: 100%;
+    height: 15rem;
+    position: relative;
+    background: #383737;
+}
+
+.video-ai-create-layout .upload-input-out .upload-tips-div {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem 0;
+}
+
+.video-ai-create-layout .upload-input-out .upload-icon {
+    width: 3rem;
+    height: 3rem;
+}
+
+.video-ai-create-layout .upload-input-out .upload-tips {
+    font-size: 0.8rem;
+    color: #bcbcbc;
+}
+
+.video-ai-create-layout .upload-input-out input[type=file] {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.video-ai-create-layout .notice-part {
+    font-size: 0.7rem;
+    padding: 1rem 0;
+    color: #bcbcbc;
+}
+
+.video-ai-create-layout .notices.is-pc {
+    display: none;
+}
+
+.video-ai-create-layout .notices {
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: #959595;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.video-ai-create-layout .notices.is-mobile {
+    display: flex;
+}
+
+.video-ai-create-layout .notice {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem 0;
+}
+
+.video-ai-create-layout .notice img {
+    width: 4rem;
+    height: 4rem;
+}
+
+.video-ai-create-layout .cost-btn {
+    width: 100%;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    text-align: center;
+    background: #1abc9d;
+    color: #ffffff;
+    transition: opacity 0.15s ease;
+    font-size: 0.9rem;
+    border-radius: 0.3rem;
+    margin: 1rem 0;
+    cursor: pointer;
+}
+
+.video-ai-create-layout .cost-btn:hover {
+    opacity: 0.8;
+}
+
+.video-ai-create-layout .van-uploader .van-uploader__preview {
+    position: relative;
+    margin: 0;
+}
+
+.video-ai-create-layout .van-uploader,
+.video-ai-create-layout .van-uploader .van-uploader__wrapper,
+.video-ai-create-layout .van-uploader .van-uploader__preview,
+.video-ai-create-layout .van-uploader__input-wrapper,
+.video-ai-create-layout .van-uploader__preview-image {
+    width: 100%;
+    height: 100%;
+}
+
+.video-ai-create-layout .van-uploader__preview-image img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+.video-ai-create-layout .van-uploader__preview-delete--shadow {
+    width: 2rem;
+    height: 2rem;
+}
+
+.video-ai-create-layout .van-uploader__preview-delete-icon {
+    font-size: 2rem;
+}
+
+.video-ai-create-layout .van-uploader__preview-delete--shadow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 3;
+    width: 1rem;
+    height: 1rem;
+}
+
+.video-ai-create-layout .van-uploader__preview-delete-icon {
+    font-size: 1rem;
+}
+
+.video-ai-create-layout .modal-container-dplayer {
+    max-width: 100%;
+    width: 100%;
+    height: 70vh;
+}
+
+.video-ai-create-layout .ai-video-play-icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 4.4rem;
+    background-image: url('../../../../themes/Mirages/images/ai/video_play_icon.png');
+    background-size: cover;
+    aspect-ratio: 1;
+    z-index: 2;
+    cursor: pointer;
+}
+
+/* AI视频换脸创建 end */
+
+/* AI图生视频列表 start */
+.image-to-video-ai-section {
+    padding-top: 1rem;
+}
+
+.image-to-video-ai-section .card-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    overflow: hidden;
+}
+
+.image-to-video-ai-section .card-list li {
+    list-style: none;
+    transition: transform 0.15s ease;
+    overflow: hidden;
+}
+
+.image-to-video-ai-section .card-list li:hover {
+    transform: translateY(-2px);
+}
+
+.image-to-video-ai-section .thumb {
+    position: relative;
+    cursor: pointer;
+    width: 10.8rem;
+    max-width: 100%;
+    height: 14.75rem;
+}
+
+.image-to-video-ai-section .img {
+    width: 10.8rem;
+    max-width: 100%;
+    height: 14.75rem;
+    border-radius: 0.2rem;
+    display: block;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+.image-to-video-ai-section .caption {
+    padding: 0.3rem 0;
+    font-size: 1rem;
+    text-align: center;
+    color: #ffffff;
+    width: 10.8rem;
+    max-width: 100%;
+}
+
+.image-to-video-ai-section .modal-container-dplayer {
+    max-width: 100%;
+    width: 100%;
+    height: 70vh;
+}
+
+.image-to-video-ai-section .ai-video-play-icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 4.4rem;
+    background-image: url('../../../../themes/Mirages/images/ai/video_play_icon.png');
+    background-size: cover;
+    aspect-ratio: 1;
+    z-index: 2;
+    cursor: pointer;
+}
+
+/* AI图生视频列表 end */
+
+/* AI图生视频创建 start */
+.image-to-video-create-layout {
+    padding: 1rem 0;
+    font-family: PingFangSC;
+}
+
+.image-to-video-create-layout .is-pc {
+    display: none;
+}
+
+.image-to-video-create-layout .title {
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.image-to-video-create-layout .upload-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem 0;
+}
+
+.image-to-video-create-layout .upload-container .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.image-to-video-create-layout .upload-container .item .thumb {
+    position: relative;
+    width: 12rem;
+    height: 12rem;
+}
+
+.image-to-video-create-layout .upload-container .item .img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.2rem;
+    display: block;
+    object-fit: cover;
+}
+
+.image-to-video-create-layout .upload-input-out {
+    width: 100%;
+    height: 15rem;
+    position: relative;
+    background: #383737;
+}
+
+.image-to-video-create-layout .upload-input-out .upload-tips-div {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem 0;
+}
+
+.image-to-video-create-layout .upload-input-out .upload-icon {
+    width: 3rem;
+    height: 3rem;
+}
+
+.image-to-video-create-layout .upload-input-out .upload-tips {
+    font-size: 0.8rem;
+    color: #bcbcbc;
+}
+
+.image-to-video-create-layout .upload-input-out input[type=file] {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.image-to-video-create-layout .van-uploader .van-uploader__preview {
+    position: relative;
+    margin: 0;
+}
+
+.image-to-video-create-layout .van-uploader,
+.image-to-video-create-layout .van-uploader .van-uploader__wrapper,
+.image-to-video-create-layout .van-uploader .van-uploader__preview,
+.image-to-video-create-layout .van-uploader__input-wrapper,
+.image-to-video-create-layout .van-uploader__preview-image {
+    width: 100%;
+    height: 100%;
+}
+
+.image-to-video-create-layout .van-uploader__preview-image img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+.image-to-video-create-layout .van-uploader__preview-delete--shadow {
+    width: 2rem;
+    height: 2rem;
+}
+
+.image-to-video-create-layout .van-uploader__preview-delete-icon {
+    font-size: 2rem;
+}
+
+.image-to-video-create-layout .van-uploader__preview-delete--shadow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 3;
+    width: 1rem;
+    height: 1rem;
+}
+
+.image-to-video-create-layout .van-uploader__preview-delete-icon {
+    font-size: 1rem;
+}
+
+.image-to-video-create-layout .modal-container-dplayer {
+    max-width: 100%;
+    width: 100%;
+    height: 70vh;
+}
+
+.image-to-video-create-layout .notice-part {
+    font-size: 0.7rem;
+    padding: 1rem 0;
+    color: #bcbcbc;
+}
+
+.image-to-video-create-layout .notices.is-pc {
+    display: none;
+}
+
+.image-to-video-create-layout .notices {
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: #959595;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.image-to-video-create-layout .notices.is-mobile {
+    display: flex;
+}
+
+.image-to-video-create-layout .notice {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem 0;
+}
+
+.image-to-video-create-layout .notice img {
+    width: 4rem;
+    height: 4rem;
+}
+
+.image-to-video-create-layout .cost-btn {
+    width: 100%;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    text-align: center;
+    background: #1abc9d;
+    color: #ffffff;
+    transition: opacity 0.15s ease;
+    font-size: 0.9rem;
+    border-radius: 0.3rem;
+    margin: 1rem 0;
+    cursor: pointer;
+}
+
+.image-to-video-create-layout .cost-btn:hover {
+    opacity: 0.8;
+}
+
+.image-to-video-create-layout .ai-video-play-icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 4.4rem;
+    background-image: url('../../../../themes/Mirages/images/ai/video_play_icon.png');
+    background-size: cover;
+    aspect-ratio: 1;
+    z-index: 2;
+    cursor: pointer;
+}
+
+/* AI图生视频创建 end */
+
+/* AI脱衣创建 start */
+.clothes-ai-create-layout {
+    padding-top: 1rem;
+}
+
+.clothes-ai-create-layout .title {
+    font-size: 0.9rem;
+    color: #ffffff;
+}
+
+.clothes-ai-create-layout .type-box {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    flex-wrap: wrap;
+    width: 100%;
+    padding-top: 1rem;
+    gap: 0.5rem;
+}
+
+.clothes-ai-create-layout .type-item {
+    position: relative;
+    width: 100%;
+    height: 8rem;
+    box-sizing: border-box;
+    border-radius: 0.2rem;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+}
+
+/* 1203xf 回归测试 start */
+.clothes-ai-create-layout .type-item .img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 0.2rem;
+    object-fit: cover;
+}
+
+/* 1203xf 回归测试 end */
+.clothes-ai-create-layout .type-item p {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 2;
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 0.6rem 0;
+    color: #ffffff;
+    border-radius: 0.2rem;
+}
+
+.clothes-ai-create-layout .type-item:after {
+    content: "";
+    width: 100%;
+    height: 30%;
+    border-radius: 0.2rem;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.8) 100%);
+}
+
+.clothes-ai-create-layout .type-item .icon {
+    display: none;
+    width: 0.8rem;
+    height: 0.8rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+}
+
+.clothes-ai-create-layout .type-item.active {
+    border: 1px solid #1abc9d;
+}
+
+.clothes-ai-create-layout .type-item.active .icon {
+    display: block;
+}
+
+.clothes-ai-create-layout .upload-input-out {
+    width: 100%;
+    height: 8rem;
+    margin-top: 1.5rem;
+    position: relative;
+    background: #383737;
+}
+
+.clothes-ai-create-layout .upload-input-out .upload-tips-div {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem 0;
+}
+
+.clothes-ai-create-layout .upload-input-out input[type=file] {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.clothes-ai-create-layout .van-uploader .van-uploader__preview {
+    position: relative;
+    margin: 0;
+}
+
+.clothes-ai-create-layout .van-uploader,
+.clothes-ai-create-layout .van-uploader .van-uploader__wrapper,
+.clothes-ai-create-layout .van-uploader .van-uploader__preview,
+.clothes-ai-create-layout .van-uploader__input-wrapper,
+.clothes-ai-create-layout .van-uploader__preview-image {
+    width: 100%;
+    height: 100%;
+}
+
+.clothes-ai-create-layout .van-uploader__preview-image img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+.clothes-ai-create-layout .van-uploader__preview-delete--shadow {
+    width: 2rem;
+    height: 2rem;
+}
+
+.clothes-ai-create-layout .van-uploader__preview-delete-icon {
+    font-size: 2rem;
+}
+
+.clothes-ai-create-layout .van-uploader__preview-delete--shadow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 3;
+    width: 1rem;
+    height: 1rem;
+}
+
+.clothes-ai-create-layout .van-uploader__preview-delete-icon {
+    font-size: 1rem;
+}
+
+.clothes-ai-create-layout .modal-container-dplayer {
+    max-width: 100%;
+    width: 100%;
+    height: 70vh;
+}
+
+.clothes-ai-create-layout .upload-input-out .upload-icon {
+    width: 3rem;
+    height: 3rem;
+}
+
+.clothes-ai-create-layout .upload-input-out .upload-tips {
+    font-size: 0.8rem;
+    color: #bcbcbc;
+    text-align: center;
+}
+
+.clothes-ai-create-layout .demo-tips {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.5rem 0;
+    margin-top: 1.5rem;
+}
+
+.clothes-ai-create-layout .demo-tips img {
+    width: 12rem;
+    height: 12rem;
+    display: block;
+    border-radius: 0.2rem;
+}
+
+.clothes-ai-create-layout .notice-part {
+    font-size: 0.7rem;
+    color: #bcbcbc;
+    width: 100%;
+}
+
+.clothes-ai-create-layout .cost-btn {
+    width: 100%;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    text-align: center;
+    background: #1abc9d;
+    color: #ffffff;
+    transition: opacity 0.15s ease;
+    font-size: 0.9rem;
+    border-radius: 0.3rem;
+    margin: 1.5rem 0;
+    cursor: pointer;
+}
+
+.clothes-ai-create-layout .cost-btn:hover {
+    opacity: 0.8;
+}
+
+/* AI脱衣创建 end */
+
+/* pc: rem = px/16 */
+@media (min-width: 768px) {
+
+    /* AI小说 start */
+    .wst-novel-title {
+        display: none;
+    }
+
+    .wst-form-item {
+        margin-bottom: 1.75rem;
+        font-size: 0.8rem;
+        line-height: 0.875rem;
+    }
+
+    .wst-novel-form-label {
+        margin-bottom: 0.75rem;
+    }
+
+    .wst-novel-form-content .van-field input,
+    .wst-novel-form-content textarea,
+    .wst-novel-form-content input {
+        padding: 1.11rem;
+        border-color: #979797;
+        text-align: left;
+    }
+
+    .wst-novel-form-content textarea {
+        height: 6.5rem;
+    }
+
+    .wst-novel-form-content .van-field input {
+        padding: 0.9375rem;
+    }
+
+    /* AI小说 end */
+
+    /* hang AI列表 start */
+    .ai-entry-list-section {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* hang AI列表 end */
+    /* hang AI换脸列表 start */
+    .image-ai-change-section .card-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .image-ai-change-section .caption {
+        padding: 0.5rem 0;
+        color: #bcbcbc;
+        width: 13.458rem;
+    }
+
+    .image-ai-change-section .thumb {
+        position: relative;
+        cursor: pointer;
+        width: 13.458rem;
+        height: 19.046rem;
+    }
+
+    .image-ai-change-section .thumb .img {
+        width: 13.458rem;
+        height: 19.046rem;
+    }
+
+    /* hang AI换脸列表 end */
+
+    /* AI图片换脸创建 start */
+    .image-ai-create-layout .is-pc {
+        display: block;
+    }
+
+    .image-ai-create-layout .is-mobile {
+        display: none;
+    }
+
+    .image-ai-create-layout .title {
+        margin-bottom: 1rem;
+    }
+
+    .image-ai-create-layout .upload-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0 1rem;
+    }
+
+    .image-ai-create-layout .upload-container .item:nth-child(1) {
+        width: 17rem;
+        height: 17rem;
+        flex-shrink: 0;
+        position: relative;
+    }
+
+    .image-ai-create-layout .upload-container article {
+        width: 17rem;
+        height: 17rem;
+    }
+
+    .image-ai-create-layout .upload-container .mask {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 7rem;
+        opacity: 0.7;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.8) 100%);
+    }
+
+    .image-ai-create-layout .upload-container .item:nth-child(1) .title {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 2;
+        text-align: center;
+    }
+
+    .image-ai-create-layout .upload-container .item:nth-child(2) {
+        flex: 1;
+    }
+
+    .image-ai-create-layout .upload-container .item .img {
+        width: 17rem;
+        height: 17rem;
+        display: block;
+    }
+
+    .image-ai-create-layout .upload-container .upload-input-out {
+        height: 17rem;
+    }
+
+    .image-ai-create-layout .line {
+        width: 100%;
+        height: 1px;
+        background-color: #444444;
+        margin-top: 1.5rem;
+    }
+
+    .image-ai-create-layout .notices.is-mobile {
+        display: none;
+    }
+
+    .image-ai-create-layout .notices.is-pc {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    /* AI图片换脸创建 end */
+
+    /* AI视频换脸列表 start */
+    .video-ai-change-section .card-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .video-ai-change-section .caption {
+        padding: 0.5rem 0;
+        color: #bcbcbc;
+        width: 13.458rem;
+        text-align: center;
+    }
+
+    .video-ai-change-section .thumb {
+        position: relative;
+        cursor: pointer;
+        width: 13.458rem;
+        height: 19.046rem;
+    }
+
+    .video-ai-change-section .thumb .img {
+        width: 13.458rem;
+        height: 19.046rem;
+    }
+
+    .video-ai-change-section .modal-container-dplayer {
+        max-width: 90%;
+        width: 90%;
+        height: 70vh;
+    }
+
+    .video-ai-change-section .ai-video-play-icon {
+        width: 2.6rem;
+    }
+
+    /* AI视频换脸列表 end */
+
+    /* AI视频换脸创建 start */
+    .video-ai-create-layout .is-pc {
+        display: block;
+    }
+
+    .video-ai-create-layout .is-mobile {
+        display: none;
+    }
+
+    .video-ai-create-layout .title {
+        margin-bottom: 1rem;
+    }
+
+    .video-ai-create-layout .upload-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0 1rem;
+    }
+
+    .video-ai-create-layout .upload-container .item:nth-child(1) {
+        width: 17rem;
+        height: 17rem;
+        flex-shrink: 0;
+        position: relative;
+    }
+
+    .video-ai-create-layout .upload-container .mask {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 7rem;
+        opacity: 0.7;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.8) 100%);
+    }
+
+    .video-ai-create-layout .upload-container .item:nth-child(1) .title {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 2;
+        text-align: center;
+    }
+
+    .video-ai-create-layout .upload-container .item:nth-child(2) {
+        flex: 1;
+    }
+
+    .video-ai-create-layout .upload-container .item .thumb {
+        width: 17rem;
+        height: 17rem;
+    }
+
+    .video-ai-create-layout .upload-container .upload-input-out {
+        height: 17rem;
+    }
+
+    .video-ai-create-layout .line {
+        width: 100%;
+        height: 1px;
+        background-color: #444444;
+        margin-top: 1rem;
+    }
+
+    .video-ai-create-layout .notices.is-mobile {
+        display: none;
+    }
+
+    .video-ai-create-layout .notices.is-pc {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .video-ai-create-layout .modal-container-dplayer {
+        max-width: 90%;
+        width: 90%;
+        height: 70vh;
+    }
+
+    .video-ai-create-layout .ai-video-play-icon {
+        width: 2.6rem;
+    }
+
+    /* AI视频换脸创建 end */
+
+    /* AI图生视频列表 start */
+    .image-to-video-ai-section .card-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .image-to-video-ai-section .caption {
+        padding: 0.5rem 0;
+        color: #bcbcbc;
+        width: 13.458rem;
+    }
+
+    .image-to-video-ai-section .thumb {
+        position: relative;
+        cursor: pointer;
+        width: 13.458rem;
+        height: 19.046rem;
+    }
+
+    .image-to-video-ai-section .thumb .img {
+        width: 13.458rem;
+        height: 19.046rem;
+    }
+
+    .image-to-video-ai-section .modal-container-dplayer {
+        max-width: 90%;
+        width: 90%;
+        height: 70vh;
+    }
+
+    .image-to-video-ai-section .ai-video-play-icon {
+        width: 2.6rem;
+    }
+
+    /* AI图生视频列表 end */
+
+    /* AI图生视频创建 start */
+    .image-to-video-create-layout .is-pc {
+        display: block;
+    }
+
+    .image-to-video-create-layout .is-mobile {
+        display: none;
+    }
+
+    .image-to-video-create-layout .title {
+        margin-bottom: 1rem;
+    }
+
+    .image-to-video-create-layout .upload-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0 1rem;
+    }
+
+    .image-to-video-create-layout .upload-container .item:nth-child(1) {
+        width: 17rem;
+        height: 17rem;
+        flex-shrink: 0;
+        position: relative;
+    }
+
+    .image-to-video-create-layout .upload-container .mask {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 7rem;
+        opacity: 0.7;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.8) 100%);
+    }
+
+    .image-to-video-create-layout .upload-container .item:nth-child(1) .title {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 2;
+        text-align: center;
+    }
+
+    .image-to-video-create-layout .upload-container .item:nth-child(2) {
+        flex: 1;
+    }
+
+    .image-to-video-create-layout .upload-container .item .thumb {
+        width: 17rem;
+        height: 17rem;
+    }
+
+    .image-to-video-create-layout .upload-container .upload-input-out {
+        height: 17rem;
+    }
+
+    .image-to-video-create-layout .line {
+        width: 100%;
+        height: 1px;
+        background-color: #444444;
+        margin-top: 1rem;
+    }
+
+    .image-to-video-create-layout .notices.is-mobile {
+        display: none;
+    }
+
+    .image-to-video-create-layout .notices.is-pc {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .image-to-video-create-layout .modal-container-dplayer {
+        max-width: 90%;
+        width: 90%;
+        height: 70vh;
+    }
+
+    .image-to-video-create-layout .ai-video-play-icon {
+        width: 2.6rem;
+    }
+
+    /* AI图生视频创建 end */
+
+    /* AI脱衣创建 start */
+    .clothes-ai-create-layout .title {
+        color: #bcbcbc;
+    }
+
+    .clothes-ai-create-layout .type-item {
+        height: 15rem;
+    }
+
+    .clothes-ai-create-layout .demo-tips {
+        flex-direction: row;
+        gap: 0 1rem;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .clothes-ai-create-layout .demo-tips img {
+        width: 317px;
+        height: 317px;
+        display: block;
+        flex-shrink: 0;
+    }
+
+    .clothes-ai-create-layout .notice-part {
+        flex: 1;
+        font-size: 0.8rem;
+    }
+
+    .clothes-ai-create-layout .type-box {
+        gap: 1rem;
+    }
+
+    .clothes-ai-create-layout .upload-input-out {
+        height: 11.11rem;
+    }
+
+    /* AI脱衣创建 end */
+    .ai-draw-create-container .ai-create-property-label {
+        margin-bottom: 0.6rem;
+    }
+}
+
+
+/* AI 头部样式 start*/
+.ai-header-section {
+    display: none !important;
+}
+
+/* 1203xf 回归测试 start */
+.mine-ai-container,
+.ai-tech-container {
+    padding-block: 3.125rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+/* 1203xf 回归测试 end */
+
+.ai-header-background {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    opacity: 1;
+    transition: 1s ease opacity;
+}
+
+@media screen and (min-width: 2400px) {
+    .ai-header-section {
+        padding-top: 3rem;
+    }
+}
+
+@media screen and (min-width: 2000px) and (max-width: 2399px) {
+    .ai-header-section {
+        padding-top: 4rem;
+    }
+}
+
+@media screen and (min-width: 1600px) and (max-width: 1999px) {
+    .ai-header-section {
+        padding-top: 4.5rem;
+    }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1599px) {
+    .ai-header-section {
+        padding-top: 5rem;
+    }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1199px) {
+    .ai-header-section {
+        padding-top: 6rem;
+    }
+}
+
+@media screen and (min-width: 850px) and (max-width: 999px) {
+    .ai-header-section {
+        padding-top: 9rem;
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 849px) {
+    .ai-header-section {
+        padding-top: 14rem;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 799px) {
+    .ai-header-section {
+        padding-top: 16rem;
+    }
+}
+
+@media (max-width: 767px) {
+
+    /* 1203xf 回归测试 start */
+    .ai-tech-container,
+    .mine-ai-container {
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 1rem !important;
+    }
+
+    /* 1203xf 回归测试 end */
+    .ai-header-section {
+        padding-top: 6.5rem;
+    }
+
+    .ai-header-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .ai-header-section {
+        position: relative;
+        display: table !important;
+        color: #fff;
+        background-color: #0B0B0B;
+        width: -webkit-calc(100% - -0.0625rem);
+        width: calc(100% - -0.0625rem);
+        text-align: center;
+        vertical-align: middle;
+        overflow: hidden;
+    }
+
+    .ai-header-section .ai-header-inner {
+        padding-top: 0 !important;
+    }
+
+    .ai-header-section .ai-header-inner .ai-header-title {
+        height: 7rem;
+        line-height: 7rem;
+        font-size: 2rem;
+        margin-bottom: 0;
+    }
+}
+
+/* AI 头部样式 end */
+
+/* 用户资料卡 start */
+.user_profile_card {
+    background-color: transparent;
+    border-radius: 0;
+    padding: 0;
+    margin-block: 1rem 1.5rem;
+    color: #fff;
+}
+
+.user_profile_card .upc_main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    min-height: 5.25rem;
+    padding: 1.125rem 1.875rem;
+    background-color: #383737;
+    border-radius: 0.375rem;
+    box-sizing: border-box;
+}
+
+.user_profile_card .upc_user {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    min-width: 0;
+}
+
+.user_profile_card .upc_avatar {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    background-color: #2a2a2a;
+}
+
+.user_profile_card .upc_avatar_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.user_profile_card .upc_userinfo {
+    min-width: 0;
+}
+
+.user_profile_card .upc_username {
+    margin: 0 0 0.25rem 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.user_profile_card .upc_userid {
+    margin: 0;
+    font-size: 0.8125rem;
+    color: #838383;
+}
+
+.user_profile_card .upc_userid span {
+    color: #838383;
+}
+
+.user_profile_card .upc_logout {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    color: #ff0c0c;
+    font-size: 0.9375rem;
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.user_profile_card .upc_logout:hover {
+    opacity: 0.8;
+    color: #ff0c0c;
+}
+
+.user_profile_card .upc_logout_icon {
+    flex-shrink: 0;
+}
+
+.user_profile_card .upc_tabs {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+    background: transparent;
+    width: fit-content;
+    max-width: 100%;
+    border-radius: 0;
+}
+
+.user_profile_card .upc_tab {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.125rem;
+    padding: 0 1.625rem;
+    border-radius: 3.1875rem;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: #fff;
+    background-color: #444242;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    white-space: nowrap;
+}
+
+.user_profile_card .upc_tab:hover {
+    color: #fff;
+}
+
+.user_profile_card .upc_tab.is-active {
+    /* 0923 需求迭代-页面 UI优化 */
+    background-color: #FF4886;
+    color: #fff;
+}
+
+.user_profile_card .upc_tab_badge {
+    position: absolute;
+    top: 0.3125rem;
+    right: 0.75rem;
+    width: 0.375rem;
+    height: 0.375rem;
+    border-radius: 50%;
+    background-color: #ff0c0c;
+}
+
+@media (max-width: 767px) {
+    .user_profile_card {
+        padding: 0;
+        margin-block: 1rem .75rem;
+        border-radius: 0;
+    }
+
+    .user_profile_card .upc_main {
+        min-height: 4.375rem;
+        padding: 0.75rem 0.9375rem;
+        border-radius: 0.375rem;
+    }
+
+    .user_profile_card .upc_avatar {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .user_profile_card .upc_username {
+        font-size: 0.75rem;
+    }
+
+    .user_profile_card .upc_userid {
+        font-size: 0.625rem;
+    }
+
+    .user_profile_card .upc_logout {
+        font-size: 0.625rem;
+    }
+
+    .user_profile_card .upc_tabs {
+        gap: 0.5rem;
+        margin-top: 1.25rem;
+    }
+
+    .user_profile_card .upc_tab {
+        height: 2rem;
+        padding: 0 0.75rem;
+        font-size: 0.75rem;
+    }
+
+    .user_profile_card .upc_tab_badge {
+        top: 0.25rem;
+        right: 0.5625rem;
+    }
+}
+
+/* 用户资料卡 end */
+
+@media (max-width: 767px) {
+    .sp_breadcrumb_nav {
+        font-size: 0.8125rem;
+    }
+
+    /* ye 导航菜单 start */
+    .user_menu {
+        width: 10rem;
+        min-width: 8rem;
+        border: 0.3125rem solid #191919;
+        border-radius: 0.25rem;
+        top: 3rem;
+    }
+
+    .user_menu a,
+    .user_menu .logout_btn {
+        padding-block: 0.6rem;
+        font-size: 0.8rem;
+        text-align: center;
+    }
+
+    .user_menu .userinfo {
+        padding-block: 0.6rem;
+    }
+
+    .user_menu .username {
+        font-size: 0.8rem;
+        text-align: center;
+        overflow: hidden;
+        word-break: break-all;
+        text-overflow: ellipsis;
+    }
+
+    .user_menu .userid {
+        font-size: 0.6rem;
+        text-align: center;
+    }
+
+    /* ye 导航菜单 end */
+
+    /* ye 登陆/注册 start */
+    .parsley-errors-list {
+        margin: 0.375rem 0 0;
+        font-size: 0.75rem;
+    }
+
+    .login_modal {
+        width: 90%;
+        min-width: auto;
+    }
+
+    .login_dialog .logo {
+        width: 6rem;
+    }
+
+    .login_dialog .slogan {
+        font-size: 0.8125rem;
+        margin-top: 0.3125rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .login_form_item {
+        margin-bottom: 0.625rem;
+    }
+
+    .login_form_item>input {
+        padding: 0.75rem 0.5rem;
+        border-radius: 0.25rem;
+        font-size: 0.75rem;
+    }
+
+    .login_dialog .btn_group {
+        column-gap: 0.625rem;
+    }
+
+    .login_dialog .btn_group .btn {
+        line-height: 2.25rem;
+        border-radius: 0.25rem;
+        font-size: 0.75rem;
+    }
+
+    .login_close_btn {
+        margin-bottom: 0.9375rem;
+        width: 2.125rem;
+        height: 2.125rem;
+    }
+
+    .login_tips {
+        margin-top: 1.25rem;
+    }
+
+    .login_tips .login_tips_title {
+        font-size: 0.75rem;
+        margin-bottom: 0.1563rem;
+    }
+
+    .login_tips .login_tips_list {
+        font-size: 0.6875rem;
+    }
+
+    /* ye 登陆/注册 end */
+
+    /* 充值中心 start */
+    .recharge_center {
+        margin-top: 1rem;
+        padding-inline: 0.2rem;
+    }
+
+    .recharge_panel {
+        padding: 1rem 1.25rem;
+    }
+
+    .recharge_panel_title {
+        font-size: 0.75rem;
+    }
+
+    .recharge_panel_balance {
+        font-size: 1.125rem;
+    }
+
+    .payment_methods {
+        gap: 0.5rem;
+    }
+
+    .payment_methods_items {
+        height: 3.125rem;
+    }
+
+    .payment_methods_items>.item_icon {
+        width: 0.9375rem;
+        height: 0.9375rem;
+    }
+
+    .recharge_record_btn {
+        font-size: 0.75rem;
+        padding: 0.4688rem 1.25rem;
+    }
+
+    .recharge_secondary_title {
+        font-size: 0.875rem;
+        margin-top: 1.125rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .recharge_amounts {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.5rem;
+    }
+
+    .recharge_amount_item {
+        gap: 0;
+        padding-bottom: 0.75rem;
+    }
+
+    .amount_item_label {
+        align-self: start;
+        font-size: 0.625rem;
+        padding: 0.1875rem 0.3125rem;
+        border-radius: 0.375rem 0 0.375rem 0;
+        margin-bottom: 0.3125rem;
+    }
+
+    .recharge_btn {
+        margin-block: 1.5625rem;
+        height: 2.5rem;
+    }
+
+    .recharge_tips .recharge_tips_list {
+        font-size: 0.6875rem;
+    }
+
+    .recharge_amount_item .amount {
+        font-size: 0.75rem;
+    }
+
+    .recharge_amount_item .price {
+        font-size: 0.625rem;
+    }
+
+    .recharge_origin_price {
+        font-size: 0.5rem;
+    }
+
+    /* 充值中心 end */
+
+    /* 支付记录 start */
+    .recharge_records_container {
+        padding-inline: 0.2rem;
+        margin: 1rem 0;
+    }
+
+    .recharge_records_nodata {
+        /* 0923 需求迭代-页面 UI优化 */
+        padding: 5rem 0 0;
+    }
+
+    .recharge_records_nodata img {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .recharge_records_nodata>p {
+        margin-top: 1rem;
+        font-size: 0.8rem;
+    }
+
+    .recharge_records_item {
+        padding: 0.9375rem 1.25rem;
+    }
+
+    .recharge_records_item+.recharge_records_item {
+        margin-top: 0.625rem;
+    }
+
+    .recharge_records_item_title {
+        font-size: 0.75rem;
+        padding-bottom: 0.5rem;
+    }
+
+    .recharge_records_item_title>.copy {
+        width: 0.65rem;
+        height: 0.65rem;
+        margin-left: 0.3125rem;
+    }
+
+    .recharge_records_item_info {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        font-size: 0.9375rem;
+    }
+
+    .recharge_records_item_status {
+        font-size: 0.75rem;
+    }
+
+    /* 支付记录 end */
+    /* 我的AI start*/
+    .mine-ai-container .ai-tabs {
+        margin-top: 0.5rem;
+        gap: 0.3rem;
+        justify-content: space-between;
+    }
+
+    .mine-ai-container .ai-tabs .ai-tab {
+        height: 2rem;
+        line-height: 2rem;
+        padding: 0 0.2rem;
+        font-size: 0.75rem;
+        text-wrap: nowrap;
+    }
+
+    .mine-ai-container .ai-status-btn-group {
+        width: 100%;
+        justify-content: center;
+        height: 1.2rem;
+        border-radius: 0.2rem;
+        margin-top: 1rem;
+    }
+
+    .mine-ai-container .ai-status {
+        line-height: 1.5rem;
+        font-weight: 500;
+        padding: 0.4375rem 0.75rem;
+        font-size: 0.5625rem;
+        border-radius: 0.75rem;
+        text-wrap: nowrap;
+        line-height: 1.11;
+    }
+
+    .mine-ai-container .is-pc {
+        display: none;
+    }
+
+    .mine-ai-container .is-mobile {
+        display: block;
+    }
+
+    .mine-ai-container .ai-list-wrap .ai-list-item {
+        width: calc(50% - 0.5rem);
+    }
+
+    .mine-ai-container .ai-list-item-cover-save {
+        font-size: 0.8rem;
+        margin-top: 0.5rem;
+        width: 6.25rem;
+        height: 1.5rem;
+        border-radius: 0.25rem;
+        font-size: 0.5625rem;
+    }
+
+    .mine-ai-container .ai-list-item-date {
+        font-size: 0.5625rem;
+        margin-top: 0.625rem;
+    }
+
+    .mine-ai-container .ai-list-item {
+        margin-bottom: 1rem;
+    }
+
+    .mine-ai-container .ai-list-item-cover .ai-video-play-icon {
+        width: 2rem;
+    }
+
+    .mine-ai-container .ai-list-item-error {
+        margin-top: 0.5rem;
+        font-size: 0.7rem;
+    }
+
+    .ai-list-no-data {
+        padding: 5rem 0;
+    }
+
+    .ai-list-no-data img {
+        width: 8.75rem;
+        height: 8.75rem;
+    }
+
+    .ai-list-no-data p {
+        margin-top: 1rem;
+        font-size: 0.8rem;
+    }
+
+    .mine-ai-container .ai-novel-header {
+        border-bottom: none;
+        border-top: 1px solid #444;
+        padding-top: 0.8rem;
+    }
+
+    .mine-ai-container .ai-novel-title {
+        font-size: 0.8rem;
+        text-align: center;
+        margin: 1.2rem 0 0.8rem 0;
+    }
+
+    .mine-ai-container .ai-novel-date {
+        font-size: 0.8rem;
+        color: #bcbcbc;
+        font-weight: 500;
+        margin-top: 0.5rem;
+    }
+
+    /* 我的AI end*/
+}
+
+#masthead #archives-title {
+    padding-top: 0;
+    margin-bottom: 0;
+}
+
+#masthead+.container #archives {
+    padding-top: 0;
+    margin-top: 0;
+}
+
+@media (min-width: 768px) {
+    #masthead #archives-title {
+        padding-top: 3.5rem;
+    }
+}

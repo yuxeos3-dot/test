@@ -1,0 +1,51 @@
+/* 0923 需求迭代-页面 UI优化：统一使用 HarmonyOS Sans SC。 */
+
+/* HarmonyOS Sans Fonts © 2021 Huawei Device Co., Ltd.；字体授权见 ../../fonts/HarmonyOS_Sans_SC/LICENSE.txt。 */
+
+@font-face {
+    font-family: "HarmonyOS Sans SC";
+    src: url("../../fonts/HarmonyOS_Sans_SC/HarmonyOS_Sans_SC_Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "HarmonyOS Sans SC";
+    src: url("../../fonts/HarmonyOS_Sans_SC/HarmonyOS_Sans_SC_Medium.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "HarmonyOS Sans SC";
+    src: url("../../fonts/HarmonyOS_Sans_SC/HarmonyOS_Sans_SC_Bold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+}
+
+html:root {
+    --ui-font-family: "HarmonyOS Sans SC", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
+    --van-base-font: var(--ui-font-family);
+}
+
+/* 0923 需求迭代-页面 UI优化：全站文本统一字体，覆盖页面、弹窗和第三方组件的旧文本字体。 */
+html body,
+html body *:not(:where(
+    pre, pre *, code, code *, kbd, kbd *, samp, samp *,
+    .fa, .fa *, .fas, .fas *, .far, .far *, .fab, .fab *,
+    .fal, .fal *, .fad, .fad *, .fat, .fat *,
+    [class^="fa-"], [class^="fa-"] *, [class*=" fa-"], [class*=" fa-"] *,
+    .layui-icon, .layui-icon *, .van-icon, .van-icon *, .iconfont, .iconfont *
+)) {
+    font-family: var(--ui-font-family) !important;
+}
+
+/* 兼容模板中带 !important 的播放器及 GitHub 信息区域。 */
+html body .github-box,
+html body .github-box .github-box-title h3,
+html body .aplayer {
+    font-family: var(--ui-font-family) !important;
+}

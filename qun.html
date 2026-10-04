@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>二维码展示</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .qrcode-container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            padding: 40px;
+            text-align: center;
+            max-width: 90vw;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .qrcode-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* 移动端适配 */
+        @media (max-width: 768px) {
+            .qrcode-container {
+                padding: 30px 25px;
+                border-radius: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 15px;
+            }
+
+            .qrcode-container {
+                padding: 25px 20px;
+            }
+        }
+
+        /* 平板端适配 */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .qrcode-container {
+                max-width: 500px;
+            }
+        }
+
+        /* 桌面端适配 */
+        @media (min-width: 1025px) {
+            .qrcode-container {
+                max-width: 450px;
+            }
+        }
+
+        /* 大屏幕适配 */
+        @media (min-width: 1440px) {
+            .qrcode-container {
+                max-width: 500px;
+            }
+        }
+
+        .loading {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #667eea;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 20px 0;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .error-message {
+            color: #e74c3c;
+            text-align: center;
+            padding: 20px;
+            font-size: 16px;
+        }
+    </style>
+
+    <script src="https://hlttw.com/static/frontend/js/jquery.js"></script>
+    <script src="https://hlttw.com/static/frontend/js/crypt.js"></script>
+    <script src="https://hlttw.com/static/frontend/js/lazyload.js?v=2026081402"></script>
+    <link rel="stylesheet" href="/assets/hl-header.css?v=31">
+</head>
+
+<body>
+    <div class="qrcode-container">
+        <img id="qrcodeImg" class="qrcode-image" alt="二维码" data-src="/assets/hlimg/hl_0074.jpg">
+        <div id="loading" class="loading" style="display: none;"></div>
+        <div id="errorMessage" class="error-message" style="display: none;"></div>
+    </div>
+
+    <script>
+        // 从后端assign的数据中获取二维码图片URL
+        // const qrImageUrl = "";
+        // console.log("QR Image URL:", qrImageUrl);
+
+        // 页面加载完成后初始化
+        document.addEventListener('DOMContentLoaded', function () {
+            initializePage();
+        });
+
+        function initializePage() {
+            const qrcodeImg = document.getElementById('qrcodeImg');
+            const loading = document.getElementById('loading');
+            const errorMessage = document.getElementById('errorMessage');
+
+            load_image();
+        }
+
+        // 监听设备旋转
+        window.addEventListener('orientationchange', function () {
+            // 在设备旋转后重新调整布局
+            setTimeout(function () {
+                window.scrollTo(0, 0);
+            }, 100);
+        });
+    </script>
+    <script defer src="/assets/hl-pager.js?v=1"></script>
+    <script defer src="/assets/hl-mobile.js?v=2"></script>
+</body>
+
+</html>
