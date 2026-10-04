@@ -1,4 +1,4 @@
-/* 黑料头条 分页增强: 把主题默认分页重渲染为数字分页(‹ 1 2 … N › 跳转 GO 每页) */
+/* 黑料头条 分页增强: 数字分页(‹ 1 2 … N › 跳转 GO 每页). URL 由当前 pathname 推导, 自动适配 /test 子路径 */
 (function () {
   function init() {
     var nav = document.querySelector('.page-navigator');
@@ -45,7 +45,6 @@
     var jump = container.querySelector('.page-jump');
     nav.replaceWith(wrap);
     if (jump) jump.remove();
-    // 可能的旧 page-jump 在别处
     document.querySelectorAll('.page-jump').forEach(function (e) { e.remove(); });
 
     var jin = wrap.querySelector('.hp-jin'), go = wrap.querySelector('.hp-go');

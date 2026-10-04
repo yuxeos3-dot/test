@@ -1,11 +1,10 @@
-/* 黑料头条 页头交互：搜索可用 + 登录/注册弹窗 + 收藏本站 */
+/* 黑料头条 页头交互：搜索可用 + 登录/注册弹窗 + 收藏本站 (GitHub Pages 子路径 /test) */
 (function () {
   function go(q) {
     q = (q || '').trim();
     if (!q) return;
-    location.href = '/search/' + encodeURIComponent(q) + '/';
+    location.href = '/test/search/' + encodeURIComponent(q) + '/';
   }
-  // 回车搜索(自建搜索框 + 主题移动搜索框)
   document.addEventListener('keydown', function (e) {
     if (e.key !== 'Enter' && e.keyCode !== 13) return;
     var t = e.target; if (!t) return;
@@ -24,14 +23,14 @@
     mask.innerHTML =
       '<div class="hl-modal" role="dialog" aria-modal="true">' +
         '<button class="hl-modal-close" aria-label="关闭">&times;</button>' +
-        '<div class="hl-modal-logo"><img src="/assets/hl-logo.svg" alt="黑料头条"></div>' +
+        '<div class="hl-modal-logo"><img src="/test/assets/hl-logo.svg" alt="黑料头条"></div>' +
         '<div class="hl-modal-head"><button data-tab="login" class="on">登录</button><button data-tab="register">注册</button></div>' +
         '<div class="hl-modal-body">' +
           '<div class="fld"><input type="text" name="u" placeholder="用户名 / 手机号" autocomplete="username"></div>' +
           '<div class="fld"><input type="password" name="p" placeholder="密码" autocomplete="current-password"></div>' +
           '<div class="fld hl-fld-confirm" style="display:none"><input type="password" name="p2" placeholder="确认密码"></div>' +
           '<button class="hl-modal-submit">登录</button>' +
-          '<p class="hl-modal-tip">登录即代表同意本站 <a href="/privacy.html">隐私政策</a> 与 <a href="/dmca.html">免责声明</a></p>' +
+          '<p class="hl-modal-tip">登录即代表同意本站 <a href="/test/privacy.html">隐私政策</a> 与 <a href="/test/dmca.html">免责声明</a></p>' +
         '</div>' +
       '</div>';
     document.body.appendChild(mask); modal = mask;
